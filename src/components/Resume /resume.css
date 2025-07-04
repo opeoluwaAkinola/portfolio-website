@@ -1,0 +1,277 @@
+@keyframes forward {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(5px);
+    }
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-bg, #1a1a1a);
+    border-radius: 12px;
+    position: relative;
+}
+
+.latestcontainer {
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    margin-top: 100px; /* Fixed: was border-top which is invalid */
+}
+
+.title {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    font-family: 'SF Mono', monospace;
+}
+
+.contact-info {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.sectionname {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sectionname::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--card-bg, #233554);
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.date {
+    color: var(--secondary-color, #64ffda);
+    font-family: 'SF Mono', monospace;
+    font-size: 0.9rem;
+    padding-top: 0.5rem;
+}
+
+.content-card {
+    background: transparent;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.content-card:hover {
+    background: transparent;
+    transform: translateY(-5px);
+    border-color: var(--secondary-color, #64ffda);
+}
+
+.content-card .role {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.company {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.content-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content-card li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.2rem;
+    position: relative;
+    color: white;
+    line-height: 1.5;
+}
+
+.content-card li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color, #64ffda);
+}
+
+.moreResume {
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.moreResume .button {
+    padding: 25px 75px;
+    border-radius: 50px;
+    border: 2px solid #FFF;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: white;
+    background: transparent;
+    width: auto;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.moreResume .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(223, 137, 8, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.moreResume a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+    cursor: pointer;
+}
+
+.button__text {
+    transition: 1s;
+    display: inline-flex;
+    gap: 4px;
+    color: white;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.button__text svg {
+    margin-left: 1rem;
+    animation-name: forward;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--text-color, #8892b0);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.close-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--secondary-color, #64ffda);
+}
+
+/* Download button styling */
+.download-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--card-bg, #233554);
+    text-align: center;
+}
+
+.download-button {
+    padding: 15px 40px;
+    border-radius: 8px;
+    border: 2px solid var(--secondary-color, #64ffda);
+    background: transparent;
+    color: var(--secondary-color, #64ffda);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.download-button:hover {
+    background: var(--secondary-color, #64ffda);
+    color: var(--bg-color, #0a192f);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+}
+
+.download-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .date {
+        padding-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .latestcontainer {
+        padding: 1rem;
+        margin-top: 50px;
+    }
+
+    .sectionname {
+        font-size: 1.5rem;
+    }
+
+    .moreResume .button {
+        width: auto;
+        padding: 20px 40px;
+    }
+
+    .button__text {
+        font-size: 0.9rem;
+    }
+
+    .download-button {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}

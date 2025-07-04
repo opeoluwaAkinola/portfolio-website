@@ -1,0 +1,181 @@
+@keyframes forward {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(5px);
+    }
+}
+
+.works {
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.mywork-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    justify-items: center;
+    background: transparent;
+    border-radius: 8px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    cursor: pointer; /* Added cursor pointer for clickable images */
+    overflow: hidden; /* Added to contain the scaling effect */
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+    border: 4px solid #ff00ff;
+}
+
+.banner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8); /* Increased opacity for better readability */
+    color: white;
+    text-align: center;
+    padding: 1rem; /* Increased padding */
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.image-container:hover .banner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Tech stack styling */
+.tech-stack {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    justify-content: center;
+}
+
+.tech-tag {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mywork-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Added border transition */
+}
+
+.myworks-title {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    background: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+/* Added subtitle styling */
+.myworks-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.mywork-showmore {
+    padding: 25px 75px;
+    border-radius: 50px;
+    border: 2px solid #FFF;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: white;
+    text-align: center;
+    width: 500px;
+    margin: 2rem auto 0; /* Added top margin */
+    background: transparent;
+}
+
+.mywork-showmore:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(223, 137, 8, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mywork-showmore p svg {
+    margin-left: 1rem;
+    animation-name: forward;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.mywork-showmore p {
+    transition: 1s;
+    display: inline-flex;
+    align-items: center; /* Better vertical alignment */
+    gap: 4px;
+    color: white;
+    margin: 0; /* Remove default paragraph margin */
+}
+
+@media (max-width: 768px) {
+    .mywork-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .mywork-showmore {
+        width: 300px;
+        padding: 20px 40px; /* Adjusted padding for smaller screens */
+    }
+    
+    .myworks-title {
+        font-size: 36px; /* Smaller title on mobile */
+    }
+    
+    .banner {
+        padding: 0.5rem; /* Smaller padding on mobile */
+    }
+    
+    .tech-tag {
+        font-size: 0.7rem; /* Smaller tech tags on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .mywork-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .mywork-showmore {
+        width: 280px;
+        padding: 15px 30px;
+    }
+    
+    .myworks-title {
+        font-size: 28px;
+    }
+    
+    .works {
+        padding: 10px; /* Reduced padding on very small screens */
+    }
+}
