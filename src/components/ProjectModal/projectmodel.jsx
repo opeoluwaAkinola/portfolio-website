@@ -35,25 +35,25 @@ const ProjectModal = ({ projects, initialIndex, isOpen, onClose }) => {
   };
 
   return (
-    <div className={`modal-overlay ${isOpen ? 'open' : ''}`} onClick={onClose}>
-      <div className="modal-container" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>
+    <div className={`project-modal-overlay ${isOpen ? 'open' : ''}`} onClick={onClose}>
+      <div className="project-modal-container" onClick={(e) => e.stopPropagation()}>
+        <button className="project-modal-close" onClick={onClose}>
           <X />
         </button>
 
-        <div className="modal-content">
-          <div className="modal-image-section">
+        <div className="project-modal-content">
+          <div className="project-modal-image-section">
             <img
               src={currentProject.w_img}
               alt={currentProject.title}
-              className="modal-image"
+              className="project-modal-image"
             />
             
-            <button className="modal-nav-button prev" onClick={goToPrev}>
+            <button className="project-modal-nav-button prev" onClick={goToPrev}>
               <ChevronLeft />
             </button>
             
-            <button className="modal-nav-button next" onClick={goToNext}>
+            <button className="project-modal-nav-button next" onClick={goToNext}>
               <ChevronRight />
             </button>
           </div>

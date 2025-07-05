@@ -5,31 +5,31 @@ const SocialModal = ({ isOpen, togglePopup }) => {
     const socialLinks = [
         { 
             name: 'LinkedIn', 
-            url: 'https://linkedin.com/in/yourprofile', 
+            url: 'https://www.linkedin.com/in/opeoluwa-akinola-a8309b178/', 
             icon: '💼',
             color: '#0077B5'
         },
         { 
             name: 'GitHub', 
-            url: 'https://github.com/yourusername', 
+            url: 'https://github.com/opeoluwaAkinola', 
             icon: '💻',
             color: '#333'
         },
         { 
             name: 'Twitter', 
-            url: 'https://twitter.com/yourusername', 
+            url: 'https://x.com/Akinolaopeoluw4', 
             icon: '🐦',
             color: '#1DA1F2'
         },
         { 
             name: 'Instagram', 
-            url: 'https://instagram.com/yourusername', 
+            url: 'https://www.instagram.com/op3oluwaa/', 
             icon: '📸',
             color: '#E4405F'
         },
         { 
             name: 'Email', 
-            url: 'mailto:your.email@example.com', 
+            url: 'mailto:opiiiakinola@gmail.com', 
             icon: '📧',
             color: '#EA4335'
         }
@@ -45,10 +45,14 @@ const SocialModal = ({ isOpen, togglePopup }) => {
 
         if (isOpen) {
             document.addEventListener('keydown', handleKeyDown);
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
         }
 
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
+            document.body.style.overflow = 'unset';
         };
     }, [isOpen, togglePopup]);
 
@@ -56,11 +60,11 @@ const SocialModal = ({ isOpen, togglePopup }) => {
 
     return (
         <div className="modal-overlay" onClick={togglePopup}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-container" onClick={(e) => e.stopPropagation()}>
                 <button 
                     className="modal-close" 
                     onClick={togglePopup} 
-                    aria-label="Close social media modal"
+                    aria-label="Close modal"
                 >
                     &times;
                 </button>

@@ -1,7 +1,7 @@
 .skills {
     margin: 0 auto;
     padding: 2rem;
-    max-width: 1200px;
+    max-width: 1000px;
     width: 100%;
 }
 
@@ -10,6 +10,23 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+.about-me-container {
+    background: transparent;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    margin-bottom: 2.5rem;
+}
+
+.about-me p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-family: 'SF Mono', monospace;
 }
 
 .skill-title {
@@ -27,8 +44,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 1.5rem;
-    width: 90%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 100%;
     padding: 2rem;
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 1rem;

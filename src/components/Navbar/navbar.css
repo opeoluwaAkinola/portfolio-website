@@ -60,11 +60,12 @@
     .navbar {
         padding: 20px 50px;
         position: relative;
+        justify-content: flex-start;
     }
 
-    .nav-connect {
+    /* .nav-connect {
         display: none;
-    }
+    } */
 
     .menu-icon {
         display: block;
@@ -101,131 +102,40 @@
         padding: 2rem;
     }
 
+       .logo-container {
+        padding: 0.25rem;
+        justify-content: flex-start; 
+        margin-left: 0; /* Remove any left margin */
+        width: auto; /* Let it take only needed space */
+    }
+    
+    .logo {
+        height: 2.5rem;
+    }
+
     .nav-menu li {
         font-size: 24px;
         width: 100%;
         text-align: center;
     }
 }
-/* Add these styles to your existing navbar.css file */
 
-/* Modal Overlay */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    animation: fadeIn 0.3s ease-out;
+@keyframes logoFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Modal Content */
-.modal-content {
-    background: white;
-    border-radius: 12px;
-    padding: 0;
-    max-width: 400px;
-    width: 90%;
-    max-height: 80vh;
-    overflow-y: auto;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    animation: slideIn 0.3s ease-out;
-    position: relative;
+.logo-container {
+    animation: logoFadeIn 0.5s ease-out forwards;
 }
 
-/* Modal Header */
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 25px;
-    border-bottom: 1px solid #eee;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-radius: 12px 12px 0 0;
-}
 
-.modal-header h2 {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.modal-close {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    padding: 0;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: background-color 0.2s ease;
-}
-
-.modal-close:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Modal Body */
-.modal-body {
-    padding: 25px;
-}
-
-.modal-body p {
-    margin: 0 0 20px 0;
-    color: #666;
-    font-size: 1rem;
-    text-align: center;
-}
-
-/* Social Links */
-.social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.social-link {
-    display: flex;
-    align-items: center;
-    padding: 15px 20px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #333;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.social-link:hover {
-    background: #667eea;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-    border-color: #667eea;
-}
-
-.social-icon {
-    font-size: 1.5rem;
-    margin-right: 15px;
-    width: 30px;
-    text-align: center;
-}
-
-.social-name {
-    font-weight: 500;
-    font-size: 1rem;
-}
 
 /* Make Connect With Me button clickable */
 .nav-connect {
@@ -237,6 +147,28 @@
 .nav-connect:hover {
     opacity: 0.8;
     transform: scale(1.05);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 100%;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    height: 3.5rem; /* Adjust based on your preference */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 8px rgba(185, 35, 225, 0.3));
 }
 
 /* Animations */
@@ -257,34 +189,5 @@
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 480px) {
-    .modal-content {
-        width: 95%;
-        margin: 20px;
-    }
-    
-    .modal-header {
-        padding: 15px 20px;
-    }
-    
-    .modal-header h2 {
-        font-size: 1.3rem;
-    }
-    
-    .modal-body {
-        padding: 20px;
-    }
-    
-    .social-link {
-        padding: 12px 15px;
-    }
-    
-    .social-icon {
-        font-size: 1.3rem;
-        margin-right: 12px;
     }
 }

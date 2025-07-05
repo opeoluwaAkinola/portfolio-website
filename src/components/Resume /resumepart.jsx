@@ -7,15 +7,22 @@ function Resumepart({ togglePopup }) {
             <h2 className='sectionname'>Here's my Latest Experience</h2>
             
             <div className="timeline-item">
-                <div className="date">2020 - Present</div>
+                <div className="date">July 2023-Present</div>
                 <div className="content-card">
-                    <h3 className='role'>Senior Developer</h3>
-                    <div className="company">Company XYZ</div>
+                    <h3 className='role'>Software Engineer</h3>
+                    <div className="company">Bank of America Merrill Lynch</div>
                     <ul>
-                        <li>Developed and maintained applications with a user base of over 100,000 active monthly users</li>
-                        <li>Collaborated with cross-functional teams to enhance project efficiency and deliver results ahead of schedule</li>
-                        <li>Mentored junior developers and led technical training sessions</li>
-                        <li>Implemented modern development practices and code review processes</li>
+                        <li>Providing technical excellence to design, develop, and maintain technological
+                        applications utilising technologies such as Python, Html, CSS, JavaScript,
+                        AngularJS, Smart IQ and smart DX.</li>
+                        <li>Gathering and translating internal and external client requirements into
+                        technical design specifications, and business process engineering</li>
+                        <li>Coding solutions, completing unit tests, and ensuring the solution can be
+                        integrated successfully into the overall application/system with clear, robust,
+                        and well-tested interfaces</li>
+                        <li>Participating and contributing to the delivery/release (CI/CD) events. e.g.
+                        branching timelines, pull requests, issue triage, merge/conflict resolution, and
+                        release notes.</li>
                     </ul>
                 </div>
             </div>

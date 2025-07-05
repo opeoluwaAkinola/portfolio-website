@@ -2,11 +2,12 @@ import React, { useState, useRef } from 'react';
 import './navbar.css';
 import menu_pic from "../../assets/align-justify.svg";
 import cl from "../../assets/x.svg";
+import logo from "../../assets/logo.png";
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import SocialModal from '../SocialModal/SocialModal';
 
 const Navbar = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+     const [isModalOpen, setIsModalOpen] = useState(false);
     const menuRef = useRef();
     
     const openMenu = () => {
@@ -18,11 +19,10 @@ const Navbar = () => {
     }
     
     const toggleModal = () => {
-        setIsModalOpen(prev => !prev);
-        document.body.style.overflow = isModalOpen ? 'unset' : 'hidden';
-    }
+        setIsModalOpen(!isModalOpen);
+        console.log(isModalOpen)
+    };
 
-    // Modified handleClick function for nav items
     const handleNavClick = (e, href) => {
         e.preventDefault();
         closeMenu();
@@ -35,6 +35,11 @@ const Navbar = () => {
     return (
         <>
             <div className='navbar'>
+                <div className="logo-container">
+                    <a href="#home" onClick={(e) => handleNavClick(e, '#home')}>
+                        <img src={logo} alt="Company Logo" className="logo" />
+                    </a>
+                </div>
                 <img onClick={openMenu} className="menu-icon" src={menu_pic} alt="Menu"/>
                 
                 <ul ref={menuRef} className='nav-menu'>
@@ -59,11 +64,12 @@ const Navbar = () => {
                             <p>Contact</p>
                         </a>
                     </li>
+                    <li>
+                        <button className='nav-connect' onClick={toggleModal}>
+                            Connect With Me
+                        </button>
+                    </li>
                 </ul>
-                
-                <button className='nav-connect' onClick={toggleModal}>
-                    Connect With Me
-                </button>
             </div>
 
             <SocialModal isOpen={isModalOpen} togglePopup={toggleModal} />
