@@ -1,3 +1,75 @@
+@media (max-width: 820px) {
+    .mywork-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
+        padding: 0.6rem;
+    }
+    .image-container {
+        max-width: 150px;
+        min-width: 90px;
+        height: 110px;
+        aspect-ratio: 4/3;
+    }
+    .mywork-container img {
+        max-width: 150px;
+        max-height: 110px;
+        min-width: 70px;
+        min-height: 70px;
+        aspect-ratio: 4/3;
+    }
+    .mywork-showmore {
+        width: 220px;
+        padding: 14px 24px;
+    }
+    .myworks-title {
+        font-size: 30px;
+    }
+    .banner {
+        padding: 0.4rem;
+    }
+    .tech-tag {
+        font-size: 0.65rem;
+    }
+    .works {
+        padding: 8px;
+    }
+}
+@media (max-width: 1024px) {
+    .mywork-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+    .image-container {
+        max-width: 220px;
+        min-width: 120px;
+        height: 160px;
+        aspect-ratio: 4/3;
+    }
+    .mywork-container img {
+        max-width: 220px;
+        max-height: 160px;
+        min-width: 100px;
+        min-height: 100px;
+        aspect-ratio: 4/3;
+    }
+    .mywork-showmore {
+        width: 350px;
+        padding: 18px 36px;
+    }
+    .myworks-title {
+        font-size: 42px;
+    }
+    .banner {
+        padding: 0.75rem;
+    }
+    .tech-tag {
+        font-size: 0.75rem;
+    }
+    .works {
+        padding: 16px;
+    }
+}
 @keyframes forward {
     0% {
         transform: translateX(0);
@@ -29,8 +101,16 @@
 .image-container {
     position: relative;
     width: 100%;
-    cursor: pointer; /* Added cursor pointer for clickable images */
-    overflow: hidden; /* Added to contain the scaling effect */
+    aspect-ratio: 4/3;
+    max-width: 300px;
+    min-width: 220px;
+    height: 220px;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .image-container:hover img {
@@ -48,8 +128,8 @@
     text-align: center;
     padding: 1rem; /* Increased padding */
     opacity: 1;
-    /* transform: translateY(100%);
-    transition: opacity 0.3s ease, transform 0.3s ease; */
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease; 
 }
 
 .image-container:hover .banner {
@@ -77,11 +157,16 @@
 
 .mywork-container img {
     width: 100%;
-    max-width: 300px;
     height: 100%;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Added border transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    aspect-ratio: 4/3;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 300px;
+    max-height: 220px;
 }
 
 .myworks-title {
@@ -143,22 +228,31 @@
     .mywork-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+    .image-container {
+        max-width: 180px;
+        min-width: 100px;
+        height: 120px;
+        aspect-ratio: 4/3;
+    }
+    .mywork-container img {
+        max-width: 180px;
+        max-height: 120px;
+        min-width: 80px;
+        min-height: 80px;
+        aspect-ratio: 4/3;
+    }
     .mywork-showmore {
         width: 300px;
-        padding: 20px 40px; /* Adjusted padding for smaller screens */
+        padding: 20px 40px;
     }
-    
     .myworks-title {
-        font-size: 36px; /* Smaller title on mobile */
+        font-size: 36px;
     }
-    
     .banner {
-        padding: 0.5rem; /* Smaller padding on mobile */
+        padding: 0.5rem;
     }
-    
     .tech-tag {
-        font-size: 0.7rem; /* Smaller tech tags on mobile */
+        font-size: 0.7rem;
     }
 }
 
@@ -166,17 +260,27 @@
     .mywork-container {
         grid-template-columns: 1fr;
     }
-    
+    .image-container {
+        max-width: 100vw;
+        min-width: 80px;
+        height: 80vw;
+        aspect-ratio: 4/3;
+    }
+    .mywork-container img {
+        max-width: 100vw;
+        max-height: 80vw;
+        min-width: 60px;
+        min-height: 60px;
+        aspect-ratio: 4/3;
+    }
     .mywork-showmore {
         width: 280px;
         padding: 15px 30px;
     }
-    
     .myworks-title {
         font-size: 28px;
     }
-    
     .works {
-        padding: 10px; /* Reduced padding on very small screens */
+        padding: 10px;
     }
 }
