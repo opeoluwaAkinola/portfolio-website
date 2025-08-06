@@ -28,7 +28,10 @@ const Navbar = () => {
         closeMenu();
         const element = document.querySelector(href);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const yOffset = -50; // adjust as needed (negative means scroll up more)
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
         }
     }
 
