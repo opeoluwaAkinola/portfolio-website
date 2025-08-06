@@ -28,7 +28,7 @@ export const mywork_data = [
         w_name: "Task Management App",
         w_img: taskmanagement,
         info: 'A collaborative task management application with real-time updates, team features, and progress tracking.',
-        technologies: ["React", "PostCSS", "TailWindCSS", ""],
+        technologies: ["React", "PostCSS", "TailWindCSS"],
         link: "https://task-management-app-peach-gamma.vercel.app/",
         github: "https://github.com/opeoluwaAkinola/TaskManagementApp",
         live: "https://your-task-manager-url.com"
