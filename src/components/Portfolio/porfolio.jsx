@@ -43,7 +43,6 @@ function Portfolio() {
                             />
                             <div className="banner">
                                 <h3>{work.w_name}</h3>
-                                <p>{work.info}</p>
                                 {work.technologies && work.technologies.length > 0 && (
                                     <div className="tech-stack">
                                         {work.technologies.map((tech, i) => (

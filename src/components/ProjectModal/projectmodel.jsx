@@ -87,6 +87,14 @@ const ProjectModal = ({ projects, initialIndex, isOpen, onClose }) => {
                 >
                   View Project
                 </a>
+                <a
+                  href={currentProject.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-Github"
+                >
+                  Github Repository
+                </a>
               </div>
             )}
             </div>

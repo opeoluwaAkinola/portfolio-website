@@ -57,20 +57,20 @@
 .project-modal-image-section {
         position: relative;
         border-radius: 12px;
-        
+       
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
 .project-modal-image {
   max-width: 100%;
-  height:400px ;
-  object-fit: contain;
+  height:100% ;
+  object-fit: fill;
   transition: transform 0.3s ease;
 }
 
 .project-modal-image:hover {
-  transform: scale(1.02);
+  transform: scale(1.2);
 }
 
 /* Project Details */
@@ -204,8 +204,12 @@
 /* Project Links */
 
 .project-links {
-  margin-top: auto; /* Pushes button to the bottom naturally */
-  padding-bottom: 1rem; /* Space from the bottom */
+  /* margin-top: auto; Pushes button to the bottom naturally */
+  padding-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap; /* Space from the bottom */
 }
 
 .project-link {
@@ -222,9 +226,28 @@
   color: #fff;
 }
 
+.project-Github{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  color: #fff;
+}
+
 .project-link:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.project-Github:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(107, 114, 128, 0.3);
 }
 
 /* Progress Indicators */

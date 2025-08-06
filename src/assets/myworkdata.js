@@ -1,24 +1,25 @@
 import question from "../assets/question-mark-vector-icon-png_256683.jpg"
-
+import portfolio from "../assets/PorfolioWebsite2.png"
+import ecommerce from "../assets/EccommerceProject.png"
 export const mywork_data = [
     {
         w_no: 1,
         w_name: "Portfolio Website",
-        w_img: question,
-        info: 'A modern, responsive portfolio website built with React and styled with CSS. Features smooth animations, project showcase, and contact form.',
+        w_img: portfolio,
+        info: 'A modern, responsive portfolio website built with React and styled with Tailwind CSS. Features smooth animations, project showcase, and contact form.This happend to be the one you are looking at right now',
         technologies: ["React", "CSS3", "JavaScript", "HTML5"],
-        link: "https://github.com/your-username/portfolio",
-        github: "https://github.com/your-username/portfolio",
+        link: "https://www.opeoluwaakinola.com/",
+        github: "https://github.com/opeoluwaAkinola/portfolio-website",
         live: "https://your-portfolio-url.com"
     },
     {
         w_no: 2,
         w_name: "E-commerce Platform",
-        w_img: question,
+        w_img: ecommerce,
         info: 'A full-stack e-commerce platform with user authentication, product management, shopping cart, and payment integration.',
-        technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
-        link: "https://github.com/your-username/ecommerce",
-        github: "https://github.com/your-username/ecommerce",
+        technologies: ["React", "Python", "FastApi", "MongoDB", "Postgresql","Docker","Tailwind"],
+        link: "https://e-commerce-frontend-six-mocha.vercel.app/",
+        github: "https://github.com/opeoluwaAkinola/FullStackE-commerceApp",
         live: "https://your-ecommerce-url.com"
     },
     {

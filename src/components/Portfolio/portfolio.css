@@ -17,7 +17,7 @@
 }
 
 .mywork-container {
-    display: grid;
+    display:grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding: 1rem;
@@ -34,8 +34,8 @@
 }
 
 .image-container:hover img {
-    transform: scale(1.05);
-    border: 4px solid #ff00ff;
+  transform: scale(1.1); /* More subtle zoom */
+  filter: brightness(1.05) contrast(1.05); /* Slight enhancement */
 }
 
 .banner {
@@ -47,12 +47,13 @@
     color: white;
     text-align: center;
     padding: 1rem; /* Increased padding */
-    opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+    /* transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease; */
 }
 
 .image-container:hover .banner {
+    bottom:0;
     opacity: 1;
     transform: translateY(0);
 }
@@ -77,7 +78,7 @@
 .mywork-container img {
     width: 100%;
     max-width: 300px;
-    height: auto;
+    height: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease; /* Added border transition */
