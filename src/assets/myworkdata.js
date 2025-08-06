@@ -1,6 +1,7 @@
 import question from "../assets/question-mark-vector-icon-png_256683.jpg"
 import portfolio from "../assets/PorfolioWebsite2.png"
 import ecommerce from "../assets/EccommerceProject.png"
+import taskmanagement from "../assets/TaskManagement.png"
 export const mywork_data = [
     {
         w_no: 1,
@@ -25,11 +26,11 @@ export const mywork_data = [
     {
         w_no: 3,
         w_name: "Task Management App",
-        w_img: question,
+        w_img: taskmanagement,
         info: 'A collaborative task management application with real-time updates, team features, and progress tracking.',
-        technologies: ["React", "Firebase", "Material-UI", "Redux"],
-        link: "https://github.com/your-username/task-manager",
-        github: "https://github.com/your-username/task-manager",
+        technologies: ["React", "PostCSS", "TailWindCSS", ""],
+        link: "https://task-management-app-peach-gamma.vercel.app/",
+        github: "https://github.com/opeoluwaAkinola/TaskManagementApp",
         live: "https://your-task-manager-url.com"
     },
     {
