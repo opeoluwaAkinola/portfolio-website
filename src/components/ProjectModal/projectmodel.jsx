@@ -5,6 +5,13 @@ import '../ProjectModal/Projectmodal.css'
 const ProjectModal = ({ projects, initialIndex, isOpen, onClose }) => {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
 
+  // Sync currentIndex with initialIndex whenever modal is opened or initialIndex changes
+  useEffect(() => {
+    if (isOpen) {
+      setCurrentIndex(initialIndex);
+    }
+  }, [isOpen, initialIndex]);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -45,7 +52,7 @@ const ProjectModal = ({ projects, initialIndex, isOpen, onClose }) => {
           <div className="project-modal-image-section">
             <img
               src={currentProject.w_img}
-              alt={currentProject.title}
+              alt={currentProject.w_name}
               className="project-modal-image"
             />
             
@@ -60,7 +67,7 @@ const ProjectModal = ({ projects, initialIndex, isOpen, onClose }) => {
 
           <div className="project-details">
             <div className="project-content">
-              <h2 className="project-title">{currentProject.title}</h2>
+              <h2 className="project-title">{currentProject.w_name}</h2>
               <p className="project-description">{currentProject.info}</p>
               
               {currentProject.technologies && (
